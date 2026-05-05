@@ -1,22 +1,26 @@
-# Simple Vulnerability Scanner for Beginners
+#  Web Security Scanner (Python)
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Educational](https://img.shields.io/badge/purpose-educational-green.svg)](https://github.com)
 
-A beginner-friendly web vulnerability scanner written in Python, focusing on OWASP Top 10 vulnerabilities. This tool is designed for educational purposes and ethical security testing.
+A Python-based VAPT (Vulnerability Assessment and Penetration Testing) tool developed by me to identify common web security vulnerabilities like SQL Injection, XSS, and misconfigured security headers.
+This project was customized and enhanced by me for learning and interview preparation purposes.
+TEST CHANGE FOR GIT CHECK
+
  
 ## 🎯 Features
-
-- **OWASP Top 10 Focus**: Detects common web vulnerabilities
-- **SQL Injection Detection**: Tests for SQL injection vulnerabilities
-- **Cross-Site Scripting (XSS)**: Identifies potential XSS vulnerabilities
-- **Directory Traversal**: Checks for path traversal vulnerabilities
-- **Security Headers Analysis**: Evaluates missing security headers
-- **Information Disclosure**: Identifies exposed sensitive files
-- **Multi-threaded Scanning**: Fast concurrent vulnerability testing
-- **Detailed Reporting**: Comprehensive JSON and console reports
-
+- OWASP Top 10 vulnerability detection
+- SQL Injection detection
+- Cross-Site Scripting (XSS) detection
+- Directory Traversal detection
+- Security Headers analysis
+- Information Disclosure detection
+- Multi-threaded scanning
+- JSON reporting
+- Custom Risk Score calculation
+- Improved output formatting
+- Optimized crawling with URL limits
 ## 🛠️ Installation
 
 ### Prerequisites
@@ -26,7 +30,7 @@ A beginner-friendly web vulnerability scanner written in Python, focusing on OWA
 ### Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/alprsarsilmaz/simple-web-vuln-scanner.git
+git clone https://github.com/manjeet-ai-git/python-vapt-security-tool.git
 cd simple-web-vuln-scanner
 ```
 
@@ -47,14 +51,24 @@ lxml>=4.6.3
 
 ### Basic Usage
 ```bash
-python kripsarsi.py https://xxxx.com/
+python kripsarsi.py http://example.com
 ```
 
 ### Advanced Options
 ```bash
-python kripsarsi.py https://xxxx.com --timeout 15 --threads 10 --output report.json
+python kripsarsi.py http://example.com --timeout 15 --threads 10 --output report.json
 ```
-
+## ⚙️ How It Works
+1. Accepts target URL from CLI input  
+2. Normalizes URL (ensures valid HTTP/HTTPS format)  
+3. Performs lightweight crawling to collect internal endpoints  
+4. Each endpoint is analyzed using security test modules:
+   - SQL Injection detection
+   - XSS reflection checks
+   - Directory traversal validation
+5. Security headers are evaluated for misconfigurations  
+6. Findings are classified into severity levels (High / Medium / Low)  
+7. Final structured report is generated with risk score logic  
 ### Command Line Arguments
 - `url`: Target URL to scan (required)
 - `--timeout`: Request timeout in seconds (default: 10)
@@ -219,5 +233,25 @@ If you have questions or need help:
 - Review the code comments
 
 ---
+## 🚀 Project Goal
+
+The goal of this project was to understand how basic vulnerability scanners work and implement core VAPT concepts in a simple and beginner-friendly way.
+
+## 🚀 Future Improvements
+
+- Authentication-based scanning module
+- GUI dashboard for visualization
+- API-based scanning support
+- Export reports in HTML format
+
+## 👨‍💻 My Contribution
+
+- Modified and enhanced the original scanner
+- Added risk scoring system to evaluate vulnerabilities
+- Improved output formatting for better understanding
+- Optimized crawling and scanning logic
+- Customized project for beginner-level understanding and interview explanation
 
 **Remember**: With great power comes great responsibility. Use this tool ethically and legally!
+
+
