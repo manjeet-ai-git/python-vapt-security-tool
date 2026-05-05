@@ -6,7 +6,7 @@
 
 A Python-based VAPT (Vulnerability Assessment and Penetration Testing) tool developed by me to identify common web security vulnerabilities like SQL Injection, XSS, and misconfigured security headers.
 This project was customized and enhanced by me for learning and interview preparation purposes.
-TEST CHANGE FOR GIT CHECK
+
 
  
 ## 🎯 Features
